@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How It Works</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="index.html">LLM Lab</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="tokenCounter.html">Token Counter</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page content-page">
+    <section class="panel">
+      <p class="eyebrow">ES Modules</p>
+      <h1>How the refactor works</h1>
+      <p>
+        The original token counter logic has been split into three smaller JavaScript modules.
+        Each module has one responsibility, which makes the code easier to read, test, and extend.
+      </p>
+
+      <div class="module-grid">
+        <article>
+          <h2>utils.js</h2>
+          <p>Contains pure text-processing functions such as cleaning text, counting words, and estimating tokens.</p>
+        </article>
+        <article>
+          <h2>history.js</h2>
+          <p>Owns the snapshot history array and exposes functions for adding, reading, and clearing snapshots.</p>
+        </article>
+        <article>
+          <h2>dom.js</h2>
+          <p>Handles DOM selectors, event listeners, count rendering, and history rendering.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

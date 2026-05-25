@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Token Counter</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="index.html">LLM Lab</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="tokenCounter.html">Token Counter</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page token-page">
+    <section class="panel token-panel">
+      <p class="eyebrow">Live Tool</p>
+      <h1>Token Counter</h1>
+      <p class="lead">Type or paste text below to estimate characters, words, and tokens in real time.</p>
+
+      <label class="input-label" for="textInput">Your text</label>
+      <textarea id="textInput" placeholder="Start typing here..."></textarea>
+
+      <section class="stats-grid" aria-label="Text statistics">
+        <article class="stat-card">
+          <span id="charCount">0</span>
+          <p>Characters</p>
+        </article>
+        <article class="stat-card">
+          <span id="wordCount">0</span>
+          <p>Words</p>
+        </article>
+        <article class="stat-card">
+          <span id="tokenCount">0</span>
+          <p>Estimated tokens</p>
+        </article>
+      </section>
+
+      <div class="actions">
+        <button id="saveSnapshot" type="button">Save Snapshot</button>
+        <button id="clearHistory" class="secondary" type="button">Clear History</button>
+      </div>
+    </section>
+
+    <aside class="panel history-panel">
+      <h2>Snapshot History</h2>
+      <ul id="historyList" class="history-list">
+        <li class="empty-state">No snapshots saved yet.</li>
+      </ul>
+    </aside>
+  </main>
+
+  <script type="module" src="dom.js"></script>
+</body>
+</html>
